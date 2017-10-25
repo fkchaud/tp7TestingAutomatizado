@@ -2,6 +2,7 @@ import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -43,6 +44,13 @@ public class TestAutomatico {
         //clickear Register
         WebElement register2 = driver.findElement(By.name("register"));
         register2.click();
+        
+        //assert que esté el "SIGN-OFF"
+        try{
+            WebElement signoff = driver.findElement(By.linkText("SIGN-OFF"));
+        } catch (NoSuchElementException e) {
+            fail(e.getMessage());
+        }
         
         //clickear Flights
         WebElement flights = driver.findElement(By.linkText("Flights"));
