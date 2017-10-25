@@ -24,5 +24,19 @@ public class TestAutomatico {
         //clickear REGISTER
         WebElement register = driver.findElement(By.linkText("REGISTER"));
         register.click();
+        
+        //ingresar usuario
+        WebElement email = driver.findElement(By.id("email"));
+        email.sendKeys("admin");
+
+        //ingresar password
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("admin");
+        WebElement confirmPassword = driver.findElement(By.name("confirmPassword"));
+        confirmPassword.sendKeys("admin");
+
+        //clickear Register
+        WebElement register2 = driver.findElement(By.name("register"));
+        register2.click();
     }
 }
