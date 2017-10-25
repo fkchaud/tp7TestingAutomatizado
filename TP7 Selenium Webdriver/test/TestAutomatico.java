@@ -41,5 +41,9 @@ public class TestAutomatico {
         //clickear Register
         WebElement register2 = driver.findElement(By.name("register"));
         register2.click();
+        
+        //clickear Flights
+        WebElement flights = driver.findElement(By.linkText("Flights"));
+        flights.click();
     }
 }
