@@ -67,7 +67,9 @@ public class TestAutomatico {
 
             //seleccionar primera clase name=servClass value=First
             List<WebElement> servClass = driver.findElements(By.name("servClass"));
-            servClass.get(2).click();
+            for (WebElement a : servClass)
+                if (a.getAttribute("value").equals("First"))
+                    a.click();
 
             //seleccionar name=findFlights
             WebElement findFlights = driver.findElement(By.name("findFlights"));
@@ -91,7 +93,9 @@ public class TestAutomatico {
 
             //seleccionar LOG-OUT
             List<WebElement> img = driver.findElements(By.tagName("img"));
-            img.get(10).click();
+            for (WebElement x : img)
+                if ( x.getAttribute("src").equals("http://newtours.demoaut.com/images/forms/Logout.gif") )
+                    x.click();
         }
         catch (Exception e) {
             fail(e.getMessage());
