@@ -1,3 +1,4 @@
+import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.openqa.selenium.By;
@@ -54,5 +55,17 @@ public class TestAutomatico {
         //seleccionar name=toPort -> label=Paris
         Select toPort = new Select(driver.findElement(By.name("toPort")));
         toPort.selectByVisibleText("Paris");
+        
+        //seleccionar primera clase name=servClass value=First
+        List<WebElement> servClass = driver.findElements(By.name("servClass"));
+        servClass.get(2).click();
+
+        //seleccionar name=findFlights
+        WebElement findFlights = driver.findElement(By.name("findFlights"));
+        findFlights.click();
+
+        //seleccionar name=reserveFlights
+        WebElement reserveFlights = driver.findElement(By.name("reserveFlights"));
+        reserveFlights.click();
     }
 }
