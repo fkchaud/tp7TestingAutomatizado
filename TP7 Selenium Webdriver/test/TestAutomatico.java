@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class TestAutomatico {
     
@@ -45,5 +46,13 @@ public class TestAutomatico {
         //clickear Flights
         WebElement flights = driver.findElement(By.linkText("Flights"));
         flights.click();
+        
+        //seleccionar name=fromPort -> label=London
+        Select fromPort = new Select(driver.findElement(By.name("fromPort")));
+        fromPort.selectByVisibleText("London");
+
+        //seleccionar name=toPort -> label=Paris
+        Select toPort = new Select(driver.findElement(By.name("toPort")));
+        toPort.selectByVisibleText("Paris");
     }
 }
