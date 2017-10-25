@@ -10,6 +10,9 @@ public class TestAutomatico {
 
     @Test
     public void pruebaTP() {
+        //inicializar Gecko Driver
+        System.setProperty("webdriver.gecko.driver", "lib\\geckodriver-v0.19.0-win64\\geckodriver.exe");
+
         //Inicializar driver
         WebDriver driver = new FirefoxDriver();
 
