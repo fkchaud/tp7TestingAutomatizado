@@ -34,6 +34,9 @@ public class TestAutomatico {
         password.sendKeys("admin");
         WebElement confirmPassword = driver.findElement(By.name("confirmPassword"));
         confirmPassword.sendKeys("admin");
+        
+        //solucionar problema "Contraseña Insegura" de Firefox
+        email.click();
 
         //clickear Register
         WebElement register2 = driver.findElement(By.name("register"));
