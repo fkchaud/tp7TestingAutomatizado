@@ -67,5 +67,17 @@ public class TestAutomatico {
         //seleccionar name=reserveFlights
         WebElement reserveFlights = driver.findElement(By.name("reserveFlights"));
         reserveFlights.click();
+        
+        //ingresar nombre, apellido, y numero de tarjeta
+        WebElement passFirst0 = driver.findElement(By.name("passFirst0"));
+        passFirst0.sendKeys("Bruno");
+        WebElement passLast0 = driver.findElement(By.name("passLast0"));
+        passLast0.sendKeys("Diaz");
+        WebElement creditnumber = driver.findElement(By.name("creditnumber"));
+        creditnumber.sendKeys("123456789012");
+
+        //seleccionar name=buyFlights
+        WebElement buyFlights = driver.findElement(By.name("buyFlights"));
+        buyFlights.click();
     }
 }
