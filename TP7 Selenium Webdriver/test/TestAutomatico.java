@@ -79,5 +79,9 @@ public class TestAutomatico {
         //seleccionar name=buyFlights
         WebElement buyFlights = driver.findElement(By.name("buyFlights"));
         buyFlights.click();
+        
+        //seleccionar LOG-OUT
+        List<WebElement> img = driver.findElements(By.tagName("img"));
+        img.get(10).click();
     }
 }
